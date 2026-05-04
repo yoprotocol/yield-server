@@ -256,7 +256,7 @@ async function dsr() {
     )
   );
   const tvlUsd = BigNumber(Pie).times(chi).div(1e18).div(RAY); // check against https://makerburn.com/#/
-  const apy =
+  const apyBase =
     (BigNumber(dsr).div(RAY).toNumber() ** (60 * 60 * 24 * 365) - 1) * 100;
 
   return {
@@ -265,7 +265,7 @@ async function dsr() {
     symbol: 'sDAI',
     chain: 'ethereum',
     token: '0x83F20F44975D03b1b09e64809B757c47f942BEeA',
-    apy,
+    apyBase,
     tvlUsd: tvlUsd.toNumber(),
     underlyingTokens: [DAI],
     isIntrinsicSource: true,
