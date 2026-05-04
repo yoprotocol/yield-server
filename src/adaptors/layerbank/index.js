@@ -140,7 +140,7 @@ const apy = async (chain) => {
         pool: r.a_token_address,
         chain,
         project: 'layerbank',
-        symbol: r.name,
+        symbol: r.symbol,
         token: r.a_token_address,
         tvlUsd: liquidityUsd,
         totalSupplyUsd,
