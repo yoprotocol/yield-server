@@ -143,6 +143,7 @@ const getSolanaPools = async () => {
       url: `https://app.yo.xyz/vault/Solana/${vault.id.toLowerCase()}`,
       ...(rewardYield && rewardYield > 0 && {
         apyReward: rewardYield,
+        rewardTokens: ['0x1925450f5e5fb974b0aae1f3408cf5286fbd1a72'],
       }),
     };
 
